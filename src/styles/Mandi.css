@@ -1,0 +1,43 @@
+.mandi_description{
+    display: flex;
+    align-items: center;
+}
+.mandi_description_title{
+    flex-grow: 2;
+}
+.mandi_updated{
+    align-self: flex-end;
+}
+.select_body{
+    display: flex;
+    margin-top: 28px;
+}
+.select_class{
+    width: 25%;
+    align-self: flex-start;
+    padding-right: 2rem;
+}
+
+
+@media (max-width: 800px) {
+    .mandi_description {
+      flex-direction: column;
+    }
+    .mandi_updated{
+        align-self: flex-start;
+    }
+    .mandi_description_title{
+        align-self: flex-start;
+    }
+    .select_body{
+        flex-direction: column;
+    }
+    .select_class{
+        align-self: flex-start;
+        margin-bottom: 2rem;
+        width: 100%;
+    }
+    .search_btn{
+        width: 5rem;
+    }
+  }
