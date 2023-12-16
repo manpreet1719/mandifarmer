@@ -1,0 +1,17 @@
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #F8F9FA; /* Set your desired background color */
+    color: black; /* Set your desired text color */
+    padding: 2px 0;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Add more styles as needed */
+  

@@ -13,6 +13,39 @@
     
     border-radius: 10px;
 }
+.select_body{
+    display: flex;
+    margin-top: 28px;
+}
+.select_class{
+    width: 25%;
+    align-self: flex-start;
+    padding-right: 2rem;
+}
+.search_btn{
+    margin-right: 28px;
+   
+    
+}
+.modal_Btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 28px;
+}
+.mandi_description{
+    display: flex;
+    align-items: center;
+}
+.mandi_description_title{
+    flex-grow: 2;
+}
+.mandi_updated{
+    align-self: flex-end;
+}
+/* .submit_Btn{
+    margin-top: 30px;
+} */
 
 @media (max-width: 800px) {
     .home_body {

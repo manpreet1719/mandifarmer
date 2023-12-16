@@ -4,6 +4,10 @@ import Header from './components/Header';
 import Main from './components/Main';
 import Home from  './components/Home';
 import Mandi from './components/Mandi';
+import Seeds from './components/Seeds';
+import SeedsDetails from './components/SeedsDetails';
+import Login from './components/Login';
+import SignUp from './components/SignUp';
 const appRouter = createBrowserRouter([
     {
       path:'/',
@@ -15,17 +19,25 @@ const appRouter = createBrowserRouter([
           element : <Home/>
         },
         {
+          path : '/login',
+          element : <Login/>
+        },
+        {
             path:'/mandi',
             element : <Mandi/>
         },
         {
-            path: '/',
-            element : <Header/>
+            path: '/seedsservice',
+            element : <Seeds/>
         },
         {
-            path: '/',
-            element : <Header/>
-        }
+            path: '/seedsservice/:id',
+            element : <SeedsDetails/>
+        },
+        {
+          path: '/signup',
+          element : <SignUp/>
+      }
       ]
     }
   ])

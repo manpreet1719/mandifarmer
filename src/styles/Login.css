@@ -1,0 +1,18 @@
+.Login_container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-top: 50px;
+    padding: 10px;
+  
+
+}
+.login_body{
+    width: 50%;
+}
+.create_new_account{
+   padding-top: 15px;
+   padding-bottom: 15px;
+    
+}

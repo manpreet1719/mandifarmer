@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import Chart from 'chart.js/auto';
 
-const LineChart = () => {
+const LineChart = ({priceDetails}) => {
   const chartRef = useRef(null);
 
   useEffect(() => {
@@ -12,33 +12,48 @@ const LineChart = () => {
       }
 
       const ctx = chartRef.current.getContext('2d');
-      
+
       // Define your data
       const data = {
-        labels: ['January', 'February', 'March', 'April', 'May'],
+        labels: priceDetails.map((ele)=>new Date(ele.date).toLocaleDateString()),
         datasets: [
           {
             label: 'Avg Prices',
-            data: [10,20],
+            data: priceDetails.map((ele)=> ele.avgprice),
             borderColor: 'rgb(667, 192, 192)',
             fill: false,
             tension: 0.1,
           },
           {
             label: 'max Prices',
-            data: [16, 20, 15, 30, 25],
+            data:  priceDetails.map((ele)=> ele.maxprice),
             borderColor: 'rgb(75, 192, 192)',
+            fill: false,
+            tension: 0.1,
+          },
+          {
+            label: 'min Prices',
+            data:  priceDetails.map((ele)=> ele.minprice),
+            borderColor: 'rgb(80, 133, 192)',
             fill: false,
             tension: 0.1,
           }
         ],
       };
 
-      // Define chart options
       const options = {
         scales: {
+          x: {
+            title: {
+              display: true,
+              text: 'Date', 
+            },
+          },
           y: {
-            beginAtZero: true,
+            title: {
+              display: true,
+              text: 'Price',
+            },
           },
         },
       };
@@ -50,10 +65,10 @@ const LineChart = () => {
         options: options,
       });
     }
-  }, []);
+  },[priceDetails]);
 
   return (
-    <div>
+    <div >
       <canvas ref={chartRef}></canvas>
     </div>
   );
